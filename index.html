@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stell deinen Gaming PC von Grund auf selbst zusammen: CPU, Grafikkarte, RAM und weitere Komponenten frei wählen." />
+    <meta name="theme-color" content="#141619" />
+    <title>Gaming PC Konfigurator – frei zusammenstellen | Dubaro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="notice-bar">
+      <span class="notice-check" aria-hidden="true">✓</span>
+      <span>Faire Preise</span>
+      <button class="notice-close" type="button" aria-label="Hinweis schließen">×</button>
+    </div>
+
+    <header class="site-header">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="#" aria-label="Dubaro Startseite">
+        <img src="assets/dubaro-logo.png" alt="DUBARO PC SYSTEME" />
+      </a>
+      <nav class="main-navigation" id="main-navigation" aria-label="Hauptnavigation">
+        <a href="#konfiguratoren">Gaming PCs</a>
+        <a class="active" href="#konfiguratoren">PC Konfigurator</a>
+        <a href="#mehr-erfahren">Desktop PCs</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="accessories-menu">Zubehör <span aria-hidden="true">⌄</span></button>
+          <div class="nav-dropdown-menu" id="accessories-menu">
+            <a href="https://www.dubaro.de/zubehoer/monitore">Monitore</a>
+            <a href="https://www.dubaro.de/zubehoer/maeuse/">Mäuse</a>
+            <a href="https://www.dubaro.de/zubehoer/tastaturen/">Tastaturen</a>
+            <a href="https://www.dubaro.de/zubehoer/headsets/">Headsets</a>
+            <a href="https://www.dubaro.de/zubehoer/controller/">Controller</a>
+            <a href="https://www.dubaro.de/zubehoer/streaming/">Streaming</a>
+          </div>
+        </div>
+        <a href="#mehr-erfahren">Partner</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button search-toggle" type="button" aria-label="Suche öffnen"><span class="search-icon"></span></button>
+        <button class="icon-button" type="button" aria-label="Merkliste">♡</button>
+        <button class="icon-button" type="button" aria-label="Warenkorb"><span class="cart-icon"></span></button>
+        <button class="icon-button account-button" type="button" aria-label="Kundenkonto">◎</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-banner" aria-label="Freie PC Konfiguratoren">
+        <img src="assets/configurator-hero.jpg" alt="Gaming-PC Komponenten für deinen individuellen PC" fetchpriority="high" />
+        <div class="hero-shade"></div>
+        <div class="hero-title"><span>Freie</span><strong>PC Konfiguratoren</strong></div>
+        <span class="hero-caption">DEIN PC. DEINE ENTSCHEIDUNG.</span>
+      </section>
+
+      <div class="page-container">
+        <nav class="breadcrumbs" aria-label="Brotkrumennavigation">
+          <a href="#">⌂ <span>Startseite</span></a>
+          <span class="crumb-divider">/</span>
+          <span aria-current="page">PC Konfigurator</span>
+        </nav>
+
+        <section class="intro-section">
+          <p class="section-overline">DUBARO PC KONFIGURATOR</p>
+          <h1>PC Konfigurator</h1>
+          <div class="intro-copy">
+            <p>
+              Wähle die PC-Plattform, die zu dir passt. Im freien Konfigurator stellst du CPU, Grafikkarte, Mainboard, RAM, SSD, Gehäuse und weitere Komponenten nach deinen Wünschen zusammen. Die Kompatibilitätsprüfung hilft dir, passende Hardware auszuwählen.
+            </p>
+            <p class="intro-extra" id="intro-extra" hidden>
+              Starte mit einer offenen Plattform oder wähle gezielt eine AMD- oder Intel-Basis. Vergleiche die unterstützten Speicherstandards und Chipsätze, bevor du deine Auswahl weiter verfeinerst.
+            </p>
+            <button class="read-more" type="button" aria-expanded="false" aria-controls="intro-extra">Mehr lesen <span>⌄</span></button>
+          </div>
+        </section>
+
+        <section class="catalog" id="konfiguratoren" aria-label="PC Konfiguratoren">
+          <div class="catalog-toolbar">
+            <button class="filter-toggle" type="button" aria-expanded="false" aria-controls="filter-panel">
+              <span class="filter-icon" aria-hidden="true"></span><span class="filter-text">Filter</span><span class="filter-active-count" hidden></span>
+            </button>
+            <label class="catalog-search" hidden>
+              <span class="search-icon" aria-hidden="true"></span>
+              <span class="sr-only">Konfiguratoren suchen</span>
+              <input id="catalog-search" type="search" placeholder="Konfigurator suchen…" />
+            </label>
+            <div class="catalog-meta">
+              <span class="result-count"><strong id="result-count">6</strong> Produkte</span>
+              <label class="sort-control">
+                <span class="sr-only">Produkte sortieren</span>
+                <select id="sort-select">
+                  <option value="recommended">Unsere Empfehlung</option>
+                  <option value="price-asc">Preis aufsteigend</option>
+                  <option value="price-desc">Preis absteigend</option>
+                  <option value="name">Name A–Z</option>
+                </select>
+                <span class="select-chevron" aria-hidden="true"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-panel" id="filter-panel" hidden>
+            <fieldset>
+              <legend>Prozessor-Hersteller</legend>
+              <label><input type="checkbox" name="platform" value="amd" /> AMD</label>
+              <label><input type="checkbox" name="platform" value="intel" /> Intel</label>
+            </fieldset>
+            <fieldset>
+              <legend>Arbeitsspeicher</legend>
+              <label><input type="checkbox" name="memory" value="ddr4" /> DDR4</label>
+              <label><input type="checkbox" name="memory" value="ddr5" /> DDR5</label>
+            </fieldset>
+            <button class="clear-filters" type="button">Filter zurücksetzen</button>
+          </div>
+
+          <div class="product-grid" id="product-grid">
+            <article class="product-card" data-name="Freier PC Konfigurator" data-platform="amd intel" data-memory="ddr4 ddr5" data-price="99" data-recommended="1">
+              <a class="product-image-link" href="https://www.dubaro.de/p/freier-pc-konfigurator-400236/" target="_blank" rel="noopener noreferrer" aria-label="Freien PC Konfigurator öffnen">
+                <span class="image-label">FREIE AUSWAHL</span>
+                <img src="assets/pc-configurator-free.png" alt="PC-Konfigurator: frei wählbare Komponenten" loading="lazy" />
+                <span class="image-zoom" aria-hidden="true">↗</span>
+              </a>
+              <div class="product-content">
+                <h2><a href="https://www.dubaro.de/p/freier-pc-konfigurator-400236/" target="_blank" rel="noopener noreferrer">Freier PC Konfigurator</a></h2>
+                <ul class="feature-list">
+                  <li><span>CPU</span><strong>Alle AMD &amp; Intel CPUs</strong></li>
+                  <li><span>RAM</span><strong>DDR4 &amp; DDR5</strong></li>
+                  <li><span>MOBO</span><strong>Alle Chipsätze</strong></li>
+                </ul>
+                <div class="product-badges"><span>✓ Echtzeit-Kompatibilitätsprüfung</span><span>▥ FPS-Vorschau</span></div>
+                <div class="product-footer"><div class="price"><strong>99,00 €</strong><span>inkl. 19 % MwSt. zzgl. Versandkosten</span></div><a class="configure-button" href="https://www.dubaro.de/p/freier-pc-konfigurator-400236/" target="_blank" rel="noopener noreferrer">Bei Dubaro konfigurieren <span>›</span></a></div>
+              </div>
+            </article>
+
+            <article class="product-card" data-name="AMD Ryzen 7000/9000er PC Konfigurator" data-platform="amd" data-memory="ddr5" data-price="99" data-recommended="2">
+              <a class="product-image-link" href="https://www.dubaro.de/p/amd-ryzen-7000-9000er-pc-konfigurator-400238/" target="_blank" rel="noopener noreferrer" aria-label="AMD Ryzen 7000/9000er PC Konfigurator öffnen">
+                <span class="image-label amd-label">AMD RYZEN 7000 / 9000</span>
+                <img src="assets/pc-configurator-amd-7000-9000.png" alt="AMD Ryzen 7000/9000 PC-Konfigurator" loading="lazy" />
+                <span class="image-zoom" aria-hidden="true">↗</span>
+              </a>
+              <div class="product-content">
+                <h2><a href="https://www.dubaro.de/p/amd-ryzen-7000-9000er-pc-konfigurator-400238/" target="_blank" rel="noopener noreferrer">AMD Ryzen 7000/9000er PC Konfigurator</a></h2>
+                <ul class="feature-list">
+                  <li><span>CPU</span><strong>AMD Zen 4 &amp; Zen 5</strong></li>
+                  <li><span>RAM</span><strong>DDR5</strong></li>
+                  <li><span>MOBO</span><strong>AMD 600/800er Chipsatz</strong></li>
+                </ul>
+                <div class="product-badges"><span>✓ Echtzeit-Kompatibilitätsprüfung</span><span>▥ FPS-Vorschau</span></div>
+                <div class="product-footer"><div class="price"><strong>99,00 €</strong><span>inkl. 19 % MwSt. zzgl. Versandkosten</span></div><a class="configure-button" href="https://www.dubaro.de/p/amd-ryzen-7000-9000er-pc-konfigurator-400238/" target="_blank" rel="noopener noreferrer">Bei Dubaro konfigurieren <span>›</span></a></div>
+              </div>
+            </article>
+
+            <article class="product-card" data-name="AMD Ryzen 5000er PC Konfigurator" data-platform="amd" data-memory="ddr4" data-price="99" data-recommended="3">
+              <a class="product-image-link" href="https://www.dubaro.de/p/amd-ryzen-5000er-pc-konfigurator-400237/" target="_blank" rel="noopener noreferrer" aria-label="AMD Ryzen 5000er PC Konfigurator öffnen">
+                <span class="image-label amd-label">AMD RYZEN 5000</span>
+                <img src="assets/pc-configurator-amd-5000.png" alt="AMD Ryzen 5000 PC-Konfigurator" loading="lazy" />
+                <span class="image-zoom" aria-hidden="true">↗</span>
+              </a>
+              <div class="product-content">
+                <h2><a href="https://www.dubaro.de/p/amd-ryzen-5000er-pc-konfigurator-400237/" target="_blank" rel="noopener noreferrer">AMD Ryzen 5000er PC Konfigurator</a></h2>
+                <ul class="feature-list">
+                  <li><span>CPU</span><strong>AMD Zen 3</strong></li>
+                  <li><span>RAM</span><strong>DDR4</strong></li>
+                  <li><span>MOBO</span><strong>AMD 500er Chipsatz</strong></li>
+                </ul>
+                <div class="product-badges"><span>✓ Echtzeit-Kompatibilitätsprüfung</span><span>▥ FPS-Vorschau</span></div>
+                <div class="product-footer"><div class="price"><strong>99,00 €</strong><span>inkl. 19 % MwSt. zzgl. Versandkosten</span></div><a class="configure-button" href="https://www.dubaro.de/p/amd-ryzen-5000er-pc-konfigurator-400237/" target="_blank" rel="noopener noreferrer">Bei Dubaro konfigurieren <span>›</span></a></div>
+              </div>
+            </article>
+
+            <article class="product-card" data-name="Intel Core Ultra PC Konfigurator" data-platform="intel" data-memory="ddr5" data-price="99" data-recommended="4">
+              <a class="product-image-link" href="https://www.dubaro.de/p/intel-core-ultra-pc-konfigurator-400241/" target="_blank" rel="noopener noreferrer" aria-label="Intel Core Ultra PC Konfigurator öffnen">
+                <span class="image-label intel-label">INTEL CORE ULTRA</span>
+                <img src="assets/pc-configurator-intel-ultra.png" alt="Intel Core Ultra PC-Konfigurator" loading="lazy" />
+                <span class="image-zoom" aria-hidden="true">↗</span>
+              </a>
+              <div class="product-content">
+                <h2><a href="https://www.dubaro.de/p/intel-core-ultra-pc-konfigurator-400241/" target="_blank" rel="noopener noreferrer">Intel Core Ultra PC Konfigurator</a></h2>
+                <ul class="feature-list">
+                  <li><span>CPU</span><strong>Intel Arrow Lake-S</strong></li>
+                  <li><span>RAM</span><strong>DDR5</strong></li>
+                  <li><span>MOBO</span><strong>Intel 800er Chipsatz</strong></li>
+                </ul>
+                <div class="product-badges"><span>✓ Echtzeit-Kompatibilitätsprüfung</span><span>▥ FPS-Vorschau</span></div>
+                <div class="product-footer"><div class="price"><strong>99,00 €</strong><span>inkl. 19 % MwSt. zzgl. Versandkosten</span></div><a class="configure-button" href="https://www.dubaro.de/p/intel-core-ultra-pc-konfigurator-400241/" target="_blank" rel="noopener noreferrer">Bei Dubaro konfigurieren <span>›</span></a></div>
+              </div>
+            </article>
+
+            <article class="product-card" data-name="Intel 12./14. Gen DDR4 PC Konfigurator" data-platform="intel" data-memory="ddr4" data-price="99" data-recommended="5">
+              <a class="product-image-link" href="https://www.dubaro.de/p/intel-12.-14.-gen-ddr4-pc-konfigurator-400239/" target="_blank" rel="noopener noreferrer" aria-label="Intel 12./14. Gen DDR4 PC Konfigurator öffnen">
+                <span class="image-label intel-label">INTEL CORE · DDR4</span>
+                <img src="assets/pc-configurator-intel-ddr4.png" alt="Intel 12./14. Generation DDR4 PC-Konfigurator" loading="lazy" />
+                <span class="image-zoom" aria-hidden="true">↗</span>
+              </a>
+              <div class="product-content">
+                <h2><a href="https://www.dubaro.de/p/intel-12.-14.-gen-ddr4-pc-konfigurator-400239/" target="_blank" rel="noopener noreferrer">Intel 12./14. Gen DDR4 PC Konfigurator</a></h2>
+                <ul class="feature-list">
+                  <li><span>CPU</span><strong>Intel Alder &amp; Raptor Lake-S</strong></li>
+                  <li><span>RAM</span><strong>DDR4</strong></li>
+                  <li><span>MOBO</span><strong>Intel 600/700er Chipsatz</strong></li>
+                </ul>
+                <div class="product-badges"><span>✓ Echtzeit-Kompatibilitätsprüfung</span><span>▥ FPS-Vorschau</span></div>
+                <div class="product-footer"><div class="price"><strong>99,00 €</strong><span>inkl. 19 % MwSt. zzgl. Versandkosten</span></div><a class="configure-button" href="https://www.dubaro.de/p/intel-12.-14.-gen-ddr4-pc-konfigurator-400239/" target="_blank" rel="noopener noreferrer">Bei Dubaro konfigurieren <span>›</span></a></div>
+              </div>
+            </article>
+
+            <article class="product-card" data-name="Intel 12./14. Gen DDR5 PC Konfigurator" data-platform="intel" data-memory="ddr5" data-price="99" data-recommended="6">
+              <a class="product-image-link" href="https://www.dubaro.de/p/intel-12.-14.-gen-ddr5-pc-konfigurator-400240/" target="_blank" rel="noopener noreferrer" aria-label="Intel 12./14. Gen DDR5 PC Konfigurator öffnen">
+                <span class="image-label intel-label">INTEL CORE · DDR5</span>
+                <img src="assets/pc-configurator-intel-ddr5.png" alt="Intel 12./14. Generation DDR5 PC-Konfigurator" loading="lazy" />
+                <span class="image-zoom" aria-hidden="true">↗</span>
+              </a>
+              <div class="product-content">
+                <h2><a href="https://www.dubaro.de/p/intel-12.-14.-gen-ddr5-pc-konfigurator-400240/" target="_blank" rel="noopener noreferrer">Intel 12./14. Gen DDR5 PC Konfigurator</a></h2>
+                <ul class="feature-list">
+                  <li><span>CPU</span><strong>Intel Alder &amp; Raptor Lake-S</strong></li>
+                  <li><span>RAM</span><strong>DDR5</strong></li>
+                  <li><span>MOBO</span><strong>Intel 600/700er Chipsatz</strong></li>
+                </ul>
+                <div class="product-badges"><span>✓ Echtzeit-Kompatibilitätsprüfung</span><span>▥ FPS-Vorschau</span></div>
+                <div class="product-footer"><div class="price"><strong>99,00 €</strong><span>inkl. 19 % MwSt. zzgl. Versandkosten</span></div><a class="configure-button" href="https://www.dubaro.de/p/intel-12.-14.-gen-ddr5-pc-konfigurator-400240/" target="_blank" rel="noopener noreferrer">Bei Dubaro konfigurieren <span>›</span></a></div>
+              </div>
+            </article>
+          </div>
+          <p class="empty-state" id="empty-state" hidden>Keine Konfiguratoren gefunden. Bitte passe deine Filter an.</p>
+        </section>
+
+        <section class="learn-more" id="mehr-erfahren">
+          <details>
+            <summary>PC Konfigurator – deinen PC komplett selbst zusammenstellen <span>+</span></summary>
+            <div class="learn-copy">
+              <h2>Gaming PC selbst zusammenstellen</h2>
+              <p>Wähle die Hardware, die zu deinen Anforderungen passt. Vom Prozessor und Mainboard über Grafikkarte und Arbeitsspeicher bis zum Gehäuse stellst du deinen Rechner Schritt für Schritt zusammen.</p>
+              <h3>PC konfigurieren mit Kompatibilitätsprüfung</h3>
+              <p>Bei der Auswahl müssen viele Komponenten technisch zusammenpassen. Der Konfigurator prüft die Kompatibilität und hilft dabei, eine stimmige Konfiguration zu erstellen.</p>
+              <h3>CPU, Grafikkarte, RAM &amp; Co. frei auswählen</h3>
+              <p>Starte mit einem freien Konfigurator oder wähle direkt eine passende AMD- oder Intel-Plattform. Jeder Konfigurator zeigt dir die unterstützten Komponenten und Speicherstandards.</p>
+              <h3>Individuellen PC konfigurieren &amp; fertig aufbauen lassen</h3>
+              <p>Wenn deine Auswahl fertig ist, kannst du die Konfiguration prüfen und über die jeweilige Produktseite fortfahren.</p>
+            </div>
+          </details>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main page-container">
+        <a class="brand" href="#" aria-label="Dubaro Startseite"><img src="assets/dubaro-logo.png" alt="DUBARO PC SYSTEME" /></a>
+        <p>Dein PC. Deine Entscheidung.</p>
+        <a href="#konfiguratoren">PC Konfiguratoren ansehen ↑</a>
+      </div>
+      <div class="footer-bottom"><span>© DUBARO PC SYSTEME</span><span>PC KONFIGURATOR · HARDWARE NACH DEINER WAHL</span></div>
+    </footer>
+    <aside class="trustami-bar" aria-label="Bewertungen">
+      <img src="assets/trustami-mark.png" alt="Trustami" />
+      <span class="trustami-stars" aria-label="5 Sterne">★★★★★</span>
+      <span class="trustami-award">Ausgezeichnet</span>
+      <span class="trustami-rating"><strong>40.932</strong><small>Bewertungen</small></span>
+      <span class="trustami-details"><strong>Bewertungsgrundlage des Anbieters</strong><small>3 Verkaufs- und 5 Bewertungsplattformen</small></span>
+      <button type="button" class="trustami-close" aria-label="Bewertungsleiste schließen">×</button>
+    </aside>
+  </body>
+</html>
